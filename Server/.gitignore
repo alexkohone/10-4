@@ -1,0 +1,5 @@
+*.class
+*.jar
+io/golgi/example/tenfour/gen
+libs
+

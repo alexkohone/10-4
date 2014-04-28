@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/Users/briankelly/Documents/Development/10-4/Server/libs/golgi_j2se.jar"/>
+	<classpathentry kind="lib" path="/Users/brian/Documents/Development/Emigre/Server/libs/commons-io-2.2.jar"/>
+	<classpathentry kind="lib" path="/Users/brian/Documents/Development/Emigre/Server/libs/commons-lang3-3.3.1.jar"/>
+	<classpathentry kind="lib" path="/Users/brian/Documents/Development/Emigre/Server/libs/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/brian/Documents/Development/Emigre/Server/libs/golgi_j2se.jar"/>
+	<classpathentry kind="lib" path="/Users/brian/Documents/Development/Emigre/Server/libs/httpclient-4.2.3.jar"/>
+	<classpathentry kind="lib" path="/Users/brian/Documents/Development/Emigre/Server/libs/httpcore-4.2.2.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

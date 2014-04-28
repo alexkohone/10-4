@@ -1,0 +1,45 @@
+apply plugin: 'android'
+
+project.ext {
+    GOLGI_DIR = "$System.env.HOME" + '/Golgi-Apple-Pkg/v2-02-07/Android'
+    GOLGI_THRIFT_FILE = "../../TenFour.thrift"
+    GOLGI_DEV_KEY_FILE = "../../Golgi.DevKey"
+    GOLGI_APP_KEY_FILE = "../../Golgi.AppKey"
+    GOLGI_GEN_DIR = "src/main/java/io/golgi/example/tenfour/gen"
+    GOLGI_GEN_PKG = "io.golgi.example.tenfour.gen"
+}
+
+project.GOLGI_DIR = "$System.env.HOME" + '/Dropbox/PLATFORM-LOCAL-BUILD/build_support'
+
+apply from: project.GOLGI_DIR + '/Android/golgi.gradle'
+
+apply from: '../../10-4.Signage.gradle'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.1"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 19
+        versionCode 110100
+        versionName "1.1"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.playStoreConfig
+        }
+    }
+}
+
+// project.GOLGI_AAR =
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.google.android.gms:play-services:3.1.36'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    // compile project.GOLGI_AAR
+    compile ':golgi-support:9.99.99@aar'
+}

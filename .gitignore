@@ -1,0 +1,9 @@
+Golgi.AppKey
+Golgi.DevKey
+10-4.Signage.gradle
+*~
+# Mac OS X clutter
+*.DS_Store
+.DS_Store
+
+

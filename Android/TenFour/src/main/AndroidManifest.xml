@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.golgi.example.tenfour" >
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+
+    <!--
+      {BEGIN} GOLGI
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!--
+      {END} GOLGI
+    -->
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!--
+          {BEGIN} GOLGI
+        -->
+        <service android:exported="true" android:name=".GolgiService"/>
+        <service android:name=".GolgiGCMIntentService" />
+        <receiver
+            android:name=".GolgiGCMBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+                <category android:name="io.golgi.example.tenfour" />
+            </intent-filter>
+        </receiver>
+        <!--
+          {END} GOLGI
+        -->
+
+        <activity
+            android:name="io.golgi.example.tenfour.TenFourActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
