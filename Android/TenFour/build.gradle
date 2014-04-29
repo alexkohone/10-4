@@ -13,6 +13,32 @@ project.GOLGI_DIR = "$System.env.HOME" + '/Dropbox/PLATFORM-LOCAL-BUILD/build_su
 
 apply from: project.GOLGI_DIR + '/Android/golgi.gradle'
 
+/*
+ * The 10-4.Signage.gradle file looks like this (but with your
+ * keystore file, passwords and aliases in the relevant
+ * places:
+
+ android {
+    signingConfigs {
+
+        playStoreConfig {
+            storeFile file("/path/to/the/android.keystore")
+            storePassword "password-for-the-keystore"
+            keyAlias "alias-for-the-key-to-use"
+            keyPassword "password-for-the-key"
+        }
+    }
+}
+  and it should be placed in the same directory
+  as the Golgi.AppKey files
+
+  If you don't need to sign the APK
+  Remove/Comment-Out the following 'apply from:' line and
+  the signingConfig line android/buildTypes/Release
+
+ */
+
+
 // apply from: '../../10-4.Signage.gradle'
 
 android {
