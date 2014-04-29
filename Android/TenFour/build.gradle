@@ -1,7 +1,7 @@
 apply plugin: 'android'
 
 project.ext {
-    GOLGI_DIR = "$System.env.HOME" + '/Golgi-Apple-Pkg/v2-02-09/Android'
+    GOLGI_DIR = "$System.env.HOME" + '/Golgi-Apple-Pkg/v2-02-10'
     GOLGI_THRIFT_FILE = "../../TenFour.thrift"
     GOLGI_DEV_KEY_FILE = "../../Golgi.DevKey"
     GOLGI_APP_KEY_FILE = "../../Golgi.AppKey"
@@ -30,7 +30,7 @@ apply from: project.GOLGI_DIR + '/Android/golgi.gradle'
     }
 }
   and it should be placed in the same directory
-  as the Golgi.AppKey files
+  as the Golgi.AppKey/Golgi.DevKey files
 
   If you don't need to sign the APK
   Remove/Comment-Out the following 'apply from:' line and
@@ -66,6 +66,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:19.+'
     compile 'com.google.android.gms:play-services:3.1.36'
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    // compile project.GOLGI_AAR
-    compile ':golgi-support:9.99.99@aar'
+    compile project.GOLGI_AAR
+    // compile ':golgi-support:9.99.99@aar'
 }
