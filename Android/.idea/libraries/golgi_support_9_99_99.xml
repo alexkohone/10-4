@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="golgi-support-9.99.99">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/TenFour/build/exploded-aar/golgi-support/9.99.99/res" />
       <root url="jar://$PROJECT_DIR$/TenFour/build/exploded-aar/golgi-support/9.99.99/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/TenFour/build/exploded-aar/golgi-support/9.99.99/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -48,25 +48,14 @@ import io.golgi.example.tenfour.gen.TenFourService.*;
 
 
 public class TenFour extends Thread implements GolgiAPIHandler{
-    private static final int targetWidth = 1080/2;
-    private static final int targetHeight = 1776/2;
-    
     private Object syncObj = new Object();
     private String devKey = null;
     private String appKey = null;
-    private String identity;
     private GolgiTransportOptions stdGto;
     private GolgiTransportOptions hourGto;
     private GolgiTransportOptions dayGto;
     private Hashtable<String,RadioDevice> deviceHash = new Hashtable<String,RadioDevice>();
     
-    private boolean verbose = false;
-    private int spIdx = 0;
-    private int timeShift = 0;
-    private String[] spinner = {"|", "/", "-", "\\"};
-	
-	
-	
 	private register.RequestReceiver inboundRegister = new register.RequestReceiver() {
         @Override
         public void receiveFrom(register.ResultSender resultSender, RadioDevice device) {
@@ -162,15 +151,6 @@ public class TenFour extends Thread implements GolgiAPIHandler{
         	}
         	else if(args[i].compareTo("-appKey") == 0){
         		appKey = args[i+1];
-        		i++;
-        	}
-        	else if(args[i].compareTo("-shift") == 0){
-        		try{
-        			timeShift = Integer.valueOf(args[i+1]) * 1000 * 60;
-        		}
-        		catch(NumberFormatException nfe){
-        			timeShift = 0;
-        		}
         		i++;
         	}
         	else{
