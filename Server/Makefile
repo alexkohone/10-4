@@ -28,7 +28,7 @@
 # THE POSSIBILITY OF SUCH DAMAGES.
 #
 
-PKG_DIR		=	$(HOME)/Golgi-Apple-Pkg/v2-02-06
+PKG_DIR		=	$(HOME)/Golgi-Apple-Pkg/v2-02-09
 PKG_DIR		=	$(HOME)/Dropbox/PLATFORM-LOCAL-BUILD/build_support
 JDK_BIN		=	/usr/bin
 JRE_BIN		=	/usr/bin
