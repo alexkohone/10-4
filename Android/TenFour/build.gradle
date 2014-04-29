@@ -13,7 +13,7 @@ project.GOLGI_DIR = "$System.env.HOME" + '/Dropbox/PLATFORM-LOCAL-BUILD/build_su
 
 apply from: project.GOLGI_DIR + '/Android/golgi.gradle'
 
-apply from: '../../10-4.Signage.gradle'
+// apply from: '../../10-4.Signage.gradle'
 
 android {
     compileSdkVersion 19
@@ -29,7 +29,7 @@ android {
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-            signingConfig signingConfigs.playStoreConfig
+            // signingConfig signingConfigs.playStoreConfig
         }
     }
 }
