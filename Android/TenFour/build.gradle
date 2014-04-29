@@ -9,7 +9,7 @@ project.ext {
     GOLGI_GEN_PKG = "io.golgi.example.tenfour.gen"
 }
 
-project.GOLGI_DIR = "$System.env.HOME" + '/Dropbox/PLATFORM-LOCAL-BUILD/build_support'
+// project.GOLGI_DIR = "$System.env.HOME" + '/Dropbox/PLATFORM-LOCAL-BUILD/build_support'
 
 apply from: project.GOLGI_DIR + '/Android/golgi.gradle'
 
