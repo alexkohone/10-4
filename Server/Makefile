@@ -29,13 +29,11 @@
 #
 
 PKG_DIR		=	$(HOME)/Golgi-Apple-Pkg/v2-02-09
-PKG_DIR		=	$(HOME)/Dropbox/PLATFORM-LOCAL-BUILD/build_support
+#PKG_DIR	=	$(HOME)/Dropbox/PLATFORM-LOCAL-BUILD/build_support
 JDK_BIN		=	/usr/bin
 JRE_BIN		=	/usr/bin
 
 
-LOG4J_JAR	=	apache-log4j-1.2.17/log4j-1.2.17.jar
-HTTP_CLIENT_JAR	=	httpcomponents-client-4.3.3/lib/httpclient-4.3.3.jar
 JAVAC		=	$(JDK_BIN)/javac
 JAVA		=	$(JRE_BIN)/java
 JAR		=	$(JDK_BIN)/jar
